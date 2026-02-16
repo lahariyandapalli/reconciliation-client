@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+/* define design tokens (light mode) */
+:root {
+  /* Backgrounds */
+  --background: #f8f9fc;
+  --surface: #ffffff;
+  --surface-alt: #f9fafb;
+  --surface-inset: #f3f4f6;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --success: #10b981;
+}
+
+/* define theme */
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+}
+
+/* Base Styles */
+@layer base {
+ .center-item {
+  @apply flex items-center justify-center;
+ }
+}
+
+/* Scrollbar */
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+} */
