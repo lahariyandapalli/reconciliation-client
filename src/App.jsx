@@ -1,12 +1,12 @@
 
 import './index.css'
+import AppLayout from './layouts/AppLayout'
 
 function App() {
-
   return (
-    <div>
-    <h1 className='text-danger'>hello</h1>
-    </div>
+    <AppLayout>
+     Hello World!
+    </AppLayout>
   )
 }
 
