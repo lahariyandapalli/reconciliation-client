@@ -1,13 +1,16 @@
 import * as React from "react"
 import {
   LayoutDashboard,
-  FileText,
   Users,
-  Download,
   Landmark,
-  RefreshCw,
   KeyRound,
   ChevronsUpDown,
+  FileSpreadsheet,
+  BookOpen,
+  CheckSquare,
+  UserCog,
+  UserPlus,
+  ClipboardList,
 } from "lucide-react"
 import {
   DropdownMenu,
@@ -36,11 +39,6 @@ const menuItems = [
     icon: LayoutDashboard,
   },
   {
-    title: "Reports",
-    url: "#/reports",
-    icon: FileText,
-  },
-  {
     title: "Bank Master",
     url: "#/bank-master",
     icon: Landmark,
@@ -51,9 +49,34 @@ const menuItems = [
     icon: Users,
   },
   {
-    title: "Sync History",
-    url: "#/sync-history",
-    icon: RefreshCw,
+    title: "Bank Statement",
+    url: "#/bank-statement",
+    icon: FileSpreadsheet,
+  },
+  {
+    title: "Book Statement",
+    url: "#/book-statement",
+    icon: BookOpen,
+  },
+  {
+    title: "Reconciled Items",
+    url: "#/reconciled-items",
+    icon: CheckSquare,
+  },
+  {
+    title: "Reconciliation Summary",
+    url: "#/reconciliation-summary",
+    icon: ClipboardList,
+  },
+  {
+    title: "User Management",
+    url: "#/user-management",
+    icon: UserCog,
+  },
+  {
+    title: "Create User",
+    url: "#/create-user",
+    icon: UserPlus,
   },
 ]
 
@@ -131,9 +154,9 @@ export function AppSidebar({ ...props }) {
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent side="top" align="start" className="w-56">
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={() => (window.location.hash = '#/change-password')}>
               <KeyRound className="mr-2 h-4 w-4" />
-              Reset Password
+              Change Password
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
